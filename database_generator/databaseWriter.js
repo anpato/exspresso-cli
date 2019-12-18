@@ -5,6 +5,7 @@ import {
   SampleModelTemplate,
   sampleExportTemplate
 } from './SampleModelGenerator'
+import { commonIgnore } from '../common'
 
 const promptForDatabaseType = project_name => {
   inquirer
@@ -47,7 +48,7 @@ const promptForProjectName = () => {
 const initProjectDirectory = project_name => {
   console.info(`Creating ${project_name}`)
   const init_proj = exec(
-    `mkdir ${project_name} && cd ${project_name} && npm init -y && npm install express mongoose cors dotenv morgan body-parser`,
+    `mkdir ${project_name} && cd ${project_name} && git init && touch .gitignore && echo "${commonIgnore}" >> .gitignore && npm init -y && npm install express mongoose cors dotenv morgan body-parser`,
     (err, stdout, stderr) => {
       if (err) throw err
       if (stdout) {
