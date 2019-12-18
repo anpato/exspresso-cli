@@ -1,0 +1,19 @@
+{
+  "name": "maxpress",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Andre Pato",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^4.0.1",
+    "fs": "^0.0.1-security",
+    "inquirer": "^7.0.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/node": "^7.7.0",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/preset-env": "^7.7.1"
+  }
+}
