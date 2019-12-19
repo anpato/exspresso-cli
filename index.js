@@ -1,7 +1,3 @@
-import {
-  intitializeProject,
-  EsVersionCheck,
-  ExpressoInit
-} from './project-init'
+import { ExpressoInit } from './project-init'
 
 ExpressoInit()
