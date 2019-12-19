@@ -7,7 +7,9 @@ import {
   insertDatabaseFiles,
   insertSampleEs6DatabaseSetup,
   initializeEs6Controllers,
-  initializeEs6Routers
+  initializeEs6Routers,
+  insertDatabaseConfigMongo,
+  insertServerConfig
 } from '../common'
 import {
   SampleControllerTemplateEs6,
@@ -16,13 +18,15 @@ import {
   SampleModelRouterTemplateEs6,
   SampleRouterTemplateEs6,
   SampleEs6Schema,
-  BabelTemplate
+  BabelTemplate,
+  connection,
+  serverConfig
 } from '../templates/Es6Templates'
 import { Es6PackageScriptInsertion } from '../tools'
 
 const params = {
   gitIgnore: commonIgnore,
-  dependencies: `express mongoose cors dotenv morgan body-parser`,
+  dependencies: `express mongoose cors dotenv morgan body-parser helmet`,
   devDependencies: `@babel/cli @babel/core @babel/node @babel/plugin-proposal-class-properties @babel/preset-env nodemon --save-dev`,
   schema: SampleEs6Schema,
   babel: BabelTemplate,
@@ -30,7 +34,9 @@ const params = {
   model: SampleModelTemplateEs6,
   controller: SampleControllerTemplateEs6,
   routerModelTemplate: SampleModelRouterTemplateEs6,
-  routerTemplate: SampleRouterTemplateEs6
+  routerTemplate: SampleRouterTemplateEs6,
+  serverConfig: serverConfig,
+  connection: connection
 }
 
 const CreateMongoProjectDirectoryEs6 = project_name => {
@@ -63,25 +69,35 @@ const CreateMongoProjectDirectoryEs6 = project_name => {
             if (err) throw err
             console.info('Creating sample files for your database')
           }).once('exit', () =>
-            exec(initializeEs6Controllers(project_name, params), err => {
+            exec(insertDatabaseConfigMongo(project_name, params), err => {
               if (err) throw err
-              console.info('Creating Sample Controllers')
-            }).once('exit', () =>
-              exec(initializeEs6Routers(project_name, params), err => {
-                if (err) throw err
-                console.info('Creating sample routers')
-              })
-                .once('exit', () =>
-                  console.info('Writing scripts to package.json')
-                )
-                .once(
-                  'exit',
-                  () => Es6PackageScriptInsertion(project_name),
-                  err => {
+            })
+              .once('exit', () =>
+                exec(insertServerConfig(project_name, params), err => {
+                  if (err) throw err
+                })
+              )
+              .once('exit', () =>
+                exec(initializeEs6Controllers(project_name, params), err => {
+                  if (err) throw err
+                  console.info('Creating Sample Controllers')
+                }).once('exit', () =>
+                  exec(initializeEs6Routers(project_name, params), err => {
                     if (err) throw err
-                  }
+                    console.info('Creating sample routers')
+                  })
+                    .once('exit', () =>
+                      console.info('Writing scripts to package.json')
+                    )
+                    .once(
+                      'exit',
+                      () => Es6PackageScriptInsertion(project_name),
+                      err => {
+                        if (err) throw err
+                      }
+                    )
                 )
-            )
+              )
           )
         )
       )

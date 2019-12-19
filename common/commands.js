@@ -19,6 +19,12 @@ export const insertDatabaseFiles = project_name =>
 export const insertSampleEs6DatabaseSetup = (project_name, params) =>
   `cd ${project_name} && cd src && cd database && echo "${params.schema}" >> Schema.js && cd models && echo "${params.export}" >> index.js && echo "${params.model}" >> Sample.js`
 
+export const insertDatabaseConfigMongo = (project_name, params) =>
+  `cd ${project_name} && cd src && cd config && touch index.js && echo "${params.connection}" >> index.js`
+
+export const insertServerConfig = (project_name, params) =>
+  `cd ${project_name} && cd src && echo "${params.serverConfig}" >> index.js`
+
 export const initializeEs6Controllers = (project_name, params) =>
   `cd ${project_name} && cd src && cd controllers && touch SampleController.js && echo "${params.controller}" >> SampleController.js`
 

@@ -1,8 +1,6 @@
 export const SampleControllerTemplateEs6 = `import { SampleModel } from '../database/Schema'
 class SampleModelController {
-  constructor() {
-    super()
-  }
+
   show = async (req, res) => {
     try {
       const sample = await SampleModel.find()
