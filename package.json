@@ -4,6 +4,13 @@
   "main": "index.js",
   "author": "Andre Pato",
   "license": "MIT",
+  "scripts": {
+    "dev": "node --exec babel-node .",
+    "clean": "rm -rf build && mkdir build",
+    "build-babel": "babel -d ./build ./src -s ",
+    "build": "yarn clean && yarn build-babel",
+    "start": "babel-node ."
+  },
   "dependencies": {
     "commander": "^4.0.1",
     "fs": "^0.0.1-security",
