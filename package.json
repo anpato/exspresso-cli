@@ -1,5 +1,5 @@
 {
-  "name": "maxpress",
+  "name": "exspresso-cli",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Andre Pato",
@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "node --exec babel-node .",
     "clean": "rm -rf build && mkdir build",
-    "build-babel": "babel -d ./build ./src -s ",
+    "build-babel": "babel -d ./build ./lib -s ",
     "build": "yarn clean && yarn build-babel",
     "start": "babel-node ."
   },
