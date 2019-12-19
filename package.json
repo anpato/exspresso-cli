@@ -1,5 +1,5 @@
 {
-  "name": "exspresso-cli",
+  "name": "expresso-cli",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Andre Pato",
@@ -9,7 +9,8 @@
     "clean": "rm -rf build && mkdir build",
     "build-babel": "babel -d ./build ./lib -s ",
     "build": "yarn clean && yarn build-babel",
-    "start": "babel-node ."
+    "start": "babel-node .",
+    "prepublishOnly": "yarn build"
   },
   "dependencies": {
     "commander": "^4.0.1",
