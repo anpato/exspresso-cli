@@ -1,4 +1,3 @@
-import { exec } from 'child_process'
 import { CreateMongoProjectDirectoryEs6 } from './CreateProjectDirectory'
 
 export const DatabaseFolderSetup = (project_name, esVersion, dbType) => {

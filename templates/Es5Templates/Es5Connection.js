@@ -1,5 +1,6 @@
-export const connection = `import 'dotenv/config'
-export const databaseUrl = () => {
+export const Es5Connection = `module.exports = function() {
+  const dotenv = require('dotenv')
+  dotenv.config()
   if (process.env.NODE_ENV === 'production') {
     return {
       name: 'Production',
