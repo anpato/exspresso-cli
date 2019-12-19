@@ -1,8 +1,6 @@
 import inquirer from 'inquirer'
 
 export const EsVersionCheck = (project_name, next) => {
-  const es6Desc = `ES6: Includes Babel to use "import" and "export" statements, comes packaged with a preconfigured .babelrc`
-  es6Desc.fontcolor('White')
   inquirer
     .prompt({
       type: 'list',

@@ -2,6 +2,24 @@ import inquirer from 'inquirer'
 
 export const intitializeProject = next => {
   let projectName = null
+  console.info(`
+          }   }   {
+        {   {  }  }
+        }   }{  {
+      _{  }{  }  }_
+      (  }{  }{  {  )
+      |""---------""|                
+      |             /""\             
+      |            | _  |            
+      |             / | |            
+      |             |/  |    -Bungle-
+      |             /  /             
+      |            |  /              
+      |              |             
+      ""-----------""
+      
+    WELCOME TO EXSPRESSO
+  `)
   inquirer
     .prompt({
       name: 'project',
