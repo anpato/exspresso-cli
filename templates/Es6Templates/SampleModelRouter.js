@@ -1,4 +1,4 @@
-export const SampleModelRouterTemplateEs6 = `import { Router } from 'express'
+export const SampleModelRouterEs6 = `import { Router } from 'express'
 import SampleController from '../controllers/SampleController'
 
 const SampleRouter = Router()

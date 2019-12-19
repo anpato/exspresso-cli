@@ -1,4 +1,4 @@
-export const SampleControllerTemplateEs6 = `import { SampleModel } from '../database/Schema'
+export const SampleControllerEs6 = `import { SampleModel } from '../database/Schema'
 class SampleModelController {
 
   show = async (req, res) => {

@@ -1,4 +1,4 @@
-export const SampleModelTemplateEs6 = `import { Schema } from 'mongoose'
+export const SampleModelEs6 = `import { Schema } from 'mongoose'
 // This is a sample Template for a mongoose schema
 
 const Sample = new Schema(

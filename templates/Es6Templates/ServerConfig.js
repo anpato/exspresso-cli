@@ -1,4 +1,4 @@
-export const serverConfig = `import 'dotenv/config'
+export const serverConfigEs6 = `import 'dotenv/config'
 import express from 'express'
 import { connect, connection } from 'mongoose'
 import bodyParser from 'body-parser'

@@ -27,7 +27,7 @@ mongoose.connect(databaseUrl().connect, {
 })
 const connection = mongoose.connection
 connection.once('open', function() {
-  console.log("Connected to: "+databaseUrl().name)
+  console.log(\'Connected to: '\+databaseUrl().name)
 })
 
 // Mongodb Connection

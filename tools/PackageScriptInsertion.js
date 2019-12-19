@@ -1,7 +1,6 @@
-import { PackageScripts } from '../templates/Es6Templates'
 import { writeFile, readFileSync } from 'fs'
 
-export const Es6PackageScriptInsertion = project_name => {
+const PackageScriptInsertion = (project_name, PackageScripts) => {
   const packageJson = readFileSync(
     __dirname + `/../${project_name}/package.json`
   )
@@ -18,3 +17,5 @@ export const Es6PackageScriptInsertion = project_name => {
     }
   )
 }
+
+export default PackageScriptInsertion

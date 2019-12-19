@@ -11,8 +11,8 @@ export const EsVersionCheck = (project_name, next) => {
     ES5: Using "module.exports" and non arrow functions
     `,
       choices: [
-        'ES6'
-        // "ES5" // TO BE ADDED IN LATER RELEASE
+        'ES6',
+        'ES5' // TO BE ADDED IN LATER RELEASE
       ]
     })
     .then(({ esVersion }) => next(project_name, esVersion))

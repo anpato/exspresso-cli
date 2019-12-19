@@ -1,4 +1,4 @@
-const SampleEs5Model = `const ModelSchema = require('mongoose').Schema
+export const SampleEs5Model = `const ModelSchema = require('mongoose').Schema
 
 module.exports = new ModelSchema(
   {
