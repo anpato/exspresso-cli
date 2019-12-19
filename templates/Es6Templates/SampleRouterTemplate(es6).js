@@ -1,4 +1,4 @@
-const Es6RouterTemplate = `import { Router } from 'express'
+export const SampleRouterTemplateEs6 = `import { Router } from 'express'
 import SampleRouter from './SampleRouter'
 
 const AppRouter = Router()

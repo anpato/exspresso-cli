@@ -1,4 +1,4 @@
-export const SampleControllerTemplate = `import { SampleModel } from '../database/Schema'
+export const SampleControllerTemplateEs6 = `import { SampleModel } from '../database/Schema'
 class SampleModelController {
   constructor() {
     super()
