@@ -19,6 +19,7 @@ export const intitializeProject = next => {
       ""-----------""
       
     WELCOME TO EXSPRESSO
+    --------------------
   `)
   inquirer
     .prompt({
