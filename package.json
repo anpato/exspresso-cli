@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "Andre Pato",
+  "repository": "https://github.com/anpato/exspresso",
   "license": "MIT",
   "bin": {
     "exspresso-cli init": "./dist/index.js"
