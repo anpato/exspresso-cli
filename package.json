@@ -1,18 +1,22 @@
 {
-  "name": "expresso-cli",
+  "name": "exspresso-cli",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Andre Pato",
   "license": "MIT",
+  "bin": {
+    "exspresso-cli init": "./dist/index.js"
+  },
   "scripts": {
     "dev": "node --exec babel-node .",
-    "clean": "rm -rf build && mkdir build",
-    "build-babel": "babel -d ./build ./lib -s ",
+    "clean": "rm -rf dist ",
+    "build-babel": "babel lib  --out-dir dist ",
     "build": "yarn clean && yarn build-babel",
-    "start": "babel-node .",
+    "start": "babel-node ./lib/index.js",
     "prepublishOnly": "yarn build"
   },
   "dependencies": {
+    "babel-preset-es2015": "6",
     "commander": "^4.0.1",
     "fs": "^0.0.1-security",
     "inquirer": "^7.0.1"
