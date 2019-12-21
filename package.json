@@ -7,6 +7,9 @@
   "license": "MIT",
   "preferGlobal": true,
   "bin": "./dist/index.js",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "scripts": {
     "dev": "node --exec babel-node .",
     "clean": "rm -rf dist ",
