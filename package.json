@@ -8,7 +8,7 @@
   "preferGlobal": true,
   "bin": "./dist/index.js",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://www.npmjs.com/package/exspresso-cli"
   },
   "scripts": {
     "dev": "node --exec babel-node .",
