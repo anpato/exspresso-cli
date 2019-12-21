@@ -14,7 +14,7 @@
 
 ### Getting Started
 
-Easily spin up Express servers by selecting your preferred database dialect, currently only supports `mongoDB`.
+Easily spin up Express servers by selecting your preferred database dialect, currently only supports `mongoDB` and `postgresql`.
 
 Exspresso-cli will create folders and files according to the options selected. Postgresql schema's only support es5 at this time, but you can still select es6 in the options.
 
