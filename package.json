@@ -5,9 +5,8 @@
   "author": "Andre Pato",
   "repository": "https://github.com/anpato/exspresso",
   "license": "MIT",
-  "bin": {
-    "exspresso-cli": "./dist/index.js"
-  },
+  "preferGlobal": true,
+  "bin": "./dist/index.js",
   "scripts": {
     "dev": "node --exec babel-node .",
     "clean": "rm -rf dist ",
