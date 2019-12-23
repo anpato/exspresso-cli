@@ -11,8 +11,8 @@
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
-    "dev": "node --exec babel-node .",
     "clean": "rm -rf dist ",
+    "test": "yarn build && node ./dist/index.js",
     "build-babel": "babel lib  --out-dir dist ",
     "build": "yarn clean && yarn build-babel",
     "start": "babel-node ./lib/index.js",
@@ -42,6 +42,10 @@
     "@babel/core": "^7.7.2",
     "@babel/node": "^7.7.0",
     "@babel/plugin-proposal-class-properties": "^7.7.4",
-    "@babel/preset-env": "^7.7.1"
+    "@babel/preset-env": "^7.7.1",
+    "@babel/register": "^7.7.7",
+    "chai": "^4.2.0",
+    "chai-fs": "^2.0.0",
+    "mocha": "^6.2.2"
   }
 }
