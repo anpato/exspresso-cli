@@ -6,7 +6,9 @@
   "repository": "https://github.com/anpato/exspresso",
   "license": "MIT",
   "preferGlobal": true,
-  "bin": "./dist/index.js",
+  "bin": {
+    "exspresso-cli": "./dist/index.js"
+  },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
