@@ -20,7 +20,6 @@ Please describe the tests that you ran to verify your changes. Provide instructi
 - [ ] Test A
 - [ ] Test B
 
-
 # Checklist:
 
 - [ ] My code follows the style guidelines of this project
