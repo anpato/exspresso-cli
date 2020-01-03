@@ -23,7 +23,6 @@ _commander["default"].command('init').alias('i').description('Initialize Exspres
 
 _commander["default"].option('-m, --model', '<modelname>', '(key:value)').option('-c, --controller', '<controllername>', 'Generate Model Controller').action(function (args, cmdObj) {
   var esVersion = (0, _VerifyEsVersion["default"])();
-  console.log(args);
 
   if (args['controller']) {
     (0, _CommandParser.CommandParser)(args, function (file) {
