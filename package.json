@@ -1,6 +1,6 @@
 {
   "name": "exspresso-cli",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "main": "index.js",
   "author": "Andre Pato",
   "repository": "https://github.com/anpato/exspresso",
