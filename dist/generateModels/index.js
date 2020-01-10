@@ -1,5 +1,10 @@
 "use strict";
 
+<<<<<<< HEAD
+=======
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+>>>>>>> develop
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -15,8 +20,11 @@ var _child_process = require("child_process");
 
 var _Es5ModelGeneratorTemplate = require("./Es5ModelGeneratorTemplate");
 
+<<<<<<< HEAD
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
+=======
+>>>>>>> develop
 var GenerateModel = function GenerateModel(file, esVersion) {
   if ((0, _VerifyDialect["default"])()) {
     if (esVersion === 'es6') {

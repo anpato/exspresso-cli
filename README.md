@@ -58,3 +58,7 @@ Controllers can be generated for a Postgres build using the controller command.
 # Contribution Guidlines
 
 To contribute to this project read [Here](docs/Contribution.md)
+
+# ChangeLog
+
+- 1/9/2020 - Fixed a bug in Postgres based projects where the controller command would navigate to non existing `src` directory. Updated mongoose based models to use `modelnameModel` naming convention. Made project initialize more efficient using an asynchronous method instead of `once('exit)` call backs.

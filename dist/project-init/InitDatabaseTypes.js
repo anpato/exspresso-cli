@@ -1,5 +1,10 @@
 "use strict";
 
+<<<<<<< HEAD
+=======
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+>>>>>>> develop
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -11,8 +16,11 @@ var _CreateEs5ProjectDirectory = _interopRequireDefault(require("./CreateEs5Proj
 
 var _CreateSequelizeProjectDirectory = _interopRequireDefault(require("./CreateSequelizeProjectDirectory"));
 
+<<<<<<< HEAD
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
+=======
+>>>>>>> develop
 var DatabaseFolderSetup = function DatabaseFolderSetup(project_name, esVersion, dbType) {
   if (dbType === 'MongoDB' && esVersion === 'ES6') {
     (0, _CreateEs6ProjectDirectory["default"])(project_name);

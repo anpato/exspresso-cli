@@ -1,5 +1,10 @@
 "use strict";
 
+<<<<<<< HEAD
+=======
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+>>>>>>> develop
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -7,8 +12,11 @@ exports.EsVersionCheck = void 0;
 
 var _inquirer = _interopRequireDefault(require("inquirer"));
 
+<<<<<<< HEAD
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
+=======
+>>>>>>> develop
 var EsVersionCheck = function EsVersionCheck(project_name, next) {
   _inquirer["default"].prompt({
     type: 'list',

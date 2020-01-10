@@ -1,5 +1,10 @@
 "use strict";
 
+<<<<<<< HEAD
+=======
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+>>>>>>> develop
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -15,8 +20,11 @@ var _PackageScriptInsertion = _interopRequireDefault(require("../tools/PackageSc
 
 var _mongodbenv = require("../templates/mongodbenv");
 
+<<<<<<< HEAD
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
+=======
+>>>>>>> develop
 var params = {
   gitignore: _common.commonIgnore,
   dependencies: "express mongoose cors dotenv morgan body-parser helmet",

@@ -1,5 +1,10 @@
 "use strict";
 
+<<<<<<< HEAD
+=======
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+>>>>>>> develop
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -13,8 +18,11 @@ var _Es6ControllerTemplate = require("./Es6ControllerTemplate");
 
 var _Es5ControllerTemplate = require("./Es5ControllerTemplate");
 
+<<<<<<< HEAD
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
+=======
+>>>>>>> develop
 var GenerateController = function GenerateController(file, esVersion) {
   (0, _child_process.exec)("cd src && cd controllers && touch ".concat(file.FileName, "Controller.js && echo \"").concat(esVersion === 'es6' ? (0, _Es6ControllerTemplate.Es6ControllerTemplate)(file.FileName) : (0, _Es5ControllerTemplate.Es5ControllerTemplate)(file.FileName), "\" >> ").concat(file.FileName, "Controller.js"), function (err) {
     if (err) throw err;
