@@ -1,4 +1,4 @@
-# Exspresso
+# Exspresso-CLI
 
 ## Installation
 
